@@ -1,0 +1,46 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# QEMU
+*.qcow2
+*.img
+*.iso
+*-snapshot
+
+# NetBSD build artifacts
+/usr/src/sys/arch/*/compile/*
+/usr/obj/*
+/usr/tools/*
+
+# Editor directories and files
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Logs and temporary files
+*.log
+*.tmp
+*.pid
+*.seed
+*.backup
+*.orig
+
+# Compiled object files
+*.o
+*.ko
+*.obj
+
+# Compiled dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled static libraries
+*.a
+*.lib
+
+# Executable files
+*.out
