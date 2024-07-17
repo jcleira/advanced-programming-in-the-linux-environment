@@ -10,12 +10,12 @@ This is my personal repository notes for the cs631 course on Advanced Programmin
 ### netBSD startup using QEMU
 #### macOS
 ```bash
-qemu-system-aarch64 -M virt -cpu cortex-a72 -m 1024 -smp 2 -bios /opt/homebrew/share/qemu/edk2-aarch64-code.fd -drive file=netbsd.qcow2,if=none,id=hd0 -netdev user,id=hn0,hostfwd=tcp::2222-:22,hostfwd=tcp::8080-:80 -device virtio-blk-device,drive=hd0 -device virtio-net-device,netdev=hn0 -boot c -nographic
+qemu-system-aarch64 -M virt -cpu cortex-a72 -m 1024 -smp 2 -bios /opt/homebrew/share/qemu/edk2-aarch64-code.fd -drive file=netbsd.qcow2,if=none,id=hd0 -netdev user,id=hn0,hostfwd=tcp::2222-:22,hostfwd=tcp::8080-:80 -device virtio-blk-device,drive=hd0 -device virtio-net-device,netdev=hn0 -boot c -nographic -no-reboot
 ```
 
 #### arch
 ```bash
-qemu-system-aarch64 -M virt -cpu cortex-a72 -m 1024 -smp 2 -bios /usr/share/edk2/aarch64/QEMU_EFI.fd -drive file=netbsd.qcow2,if=none,id=hd0 -netdev user,id=hn0,hostfwd=tcp::2222-:22,hostfwd=tcp::8080-:80 -device virtio-blk-device,drive=hd0 -device virtio-net-device,netdev=hn0 -boot c -nographic
+qemu-system-aarch64 -M virt -cpu cortex-a72 -m 1024 -smp 2 -bios /usr/share/edk2/aarch64/QEMU_EFI.fd -drive file=netbsd.qcow2,if=none,id=hd0 -netdev user,id=hn0,hostfwd=tcp::2222-:22,hostfwd=tcp::8080-:80 -device virtio-blk-device,drive=hd0 -device virtio-net-device,netdev=hn0 -boot c -nographic -no-reboot
 ```
 
 ## Installation
